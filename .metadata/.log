@@ -1,0 +1,29 @@
+!SESSION 2024-12-17 19:31:27.084 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/maddpras/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/maddpras/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-17 19:31:29.534
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-17 19:31:44.594
+!MESSAGE Logback config file: /Users/maddpras/Downloads/petclinic/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-12-17 19:32:41.788
+!MESSAGE file:///Users/maddpras/Downloads/petclinic: not found.
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: file:///Users/maddpras/Downloads/petclinic: not found.
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:192)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:131)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$9.run(SourceBranchPage.java:377)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///Users/maddpras/Downloads/petclinic: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:115)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:84)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:558)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:159)
+	... 4 more
